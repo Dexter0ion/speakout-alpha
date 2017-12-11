@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登陆</title>
+    <link rel="stylesheet" href="css/loginStyle.css" />
+
+</head>
+
+<body>
+    <div id="page">
+        <h1>Heart</h1>
+        <h2>Speak Out</h2>
+        <form method='post' action='/login/Formsubmit'>
+
+            <label for="username">用户名： </label>
+            <input type="text" name="username" id="username" />
+            <div id="feedback"></div>
+
+            <label for="password">密码: </label>
+            <input type="password" name="password" id="password" />
+
+            <input type="submit" value="前往主页" />
+
+        </form>
+    </div>
+    <script src="../../js/loginJs.js"></script>
+
+</body>
+
+</html>

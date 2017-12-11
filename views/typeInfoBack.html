@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>输入您心仪对象的联系信息</title>
+    <link rel="stylesheet" href="/css/loginStyle.css" />
+</head>
+
+<body>
+    <div id="page">
+        <h1>List King</h1>
+        <form id="infoForm" method='post' action='/typeInfo/FormSubmit'>
+            <h2>她/他的</h2>
+            <h2>姓名或昵称</h2>
+            <input type="text" name = "targetName" id="targetName"></input>
+            <h2>QQ号</h2>
+            <input type="text" name = "targetQQ" id="targetQQ"></input>
+            <h2>手机号</h2>
+            <input type="text" name = "targetPhone" id="targetPhone"></input>
+            <h2>想对她/他说的话</h2>
+            <textarea name = "targetMessage" id="targetMessage"></textarea>
+            <div id="charactersLeft">180 characters</div>
+            <div id="lastKey"></div>
+
+            <hr>
+            <h2>她/他好友的</h2>
+            <h2>姓名或昵称</h2>
+            <input type="text" name = "friendName" id="friendName"></input>
+            <h2>她/他好友的QQ号</h2>
+            <input type="text" name = "friendQQ" id="friendQQ"></input>
+            <h2>她/他好友的手机号</h2>
+            <input type="text" name = "friendPhone" id="friendPhone"></input>
+            <input type="submit" value="提交信息" />
+        </form>
+    </div>
+    <script src="/js/typeInfo.js"></script>
+</body>
+
+</html>
