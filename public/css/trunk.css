@@ -387,7 +387,7 @@ nav li a:hover {
  ICON
  */
 
-h1.heart-icon {
+ h1.heart-icon {
 	background-image: url(../../img/icon-heart.png);
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -437,7 +437,7 @@ h2 span {
 
 input[type='text'],
 input[type='password'],
-textarea {
+textarea{
 	background-color: #999;
 	color: #666;
 	font-family: 'Oswald', 'Futura', sans-serif;
@@ -600,3 +600,17 @@ option {
 	display: inline;
 	font-size: 16px;
 }
+
+.select * {  
+	margin: 0;  
+	padding: 0;  
+  }  
+  .select {  
+	border:1px solid #cccccc;  
+	float: left;  
+	display: inline;  
+	}  
+  .select div {  
+	border:1px solid #f9f9f9;  
+	float: left;  
+  }  

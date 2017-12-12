@@ -11,6 +11,10 @@ var users = require('./routes/users');
 var login = require('./routes/login');
 var typeInfo = require('./routes/typeInfo');
 var typeInfoBack = require('./routes/typeInfoBack');
+var volunteerForm = require('./routes/volunteerForm');
+var submitPass = require('./routes/submitPass');
+var submitFail = require('./routes/submitFail');
+
 var ejs = require('ejs');
 var app = express();
 
@@ -34,6 +38,9 @@ app.use('/users', users);
 app.use('/login', login);
 app.use('/typeInfo', typeInfo);
 app.use('/typeInfoBack', typeInfoBack);
+app.use('/volunteerForm',volunteerForm);
+app.use('/submitPass',submitPass);
+app.use('/submitFail',submitFail);
 
 
 
