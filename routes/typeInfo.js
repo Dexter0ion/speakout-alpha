@@ -2,7 +2,13 @@ var express = require('express');
 var router = express.Router();
 //跳转登陆界面
 router.get('/', function (req, res, next) {
-  res.render('typeInfo', { title: '输入信息 ' });
+  if(req.session.sign){
+    res.render('typeInfo', { title: '输入信息 ' });
+  }
+  else{
+    res.redirect('/login');
+  }
+  
 });
 
 router.post('/FormSubmit', function (req, res) {
@@ -25,5 +31,10 @@ router.post('/FormSubmit', function (req, res) {
   }
 
   console.log(targetInfo);
+});
+
+router.post('/logout',function(req,res){
+  delete req.session.user;
+  res.redirect('/login');
 });
 module.exports = router;

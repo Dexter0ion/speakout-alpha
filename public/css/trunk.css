@@ -176,6 +176,7 @@ nav li a:hover {
 		display: block;
 		float: none;
 	}
+
 	nav li a {
 		padding: 22px 25px;
 		letter-spacing: 3px;
@@ -592,3 +593,31 @@ option {
 	padding-left: 22px;
 }
 
+
+/* 
+navigator li input
+*/
+
+nav li input[type='submit'],
+a.add {
+	background-color: #cb6868;
+	color: #f3dad1;
+	border: none;
+	border-radius: 5px;
+	padding: 8px 10px;
+	margin-top: 10px;
+	float: right;
+	font-size: 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+nav li input[type='submit']:hover,
+a.add:hover {
+	background-color: #d75359;
+	color: #f3dad1;
+	cursor: pointer;
+	box-shadow: none;
+	position: relative;
+	top: 1px;
+}

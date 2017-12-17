@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -49,6 +50,16 @@ app.post('/test', function (req, res) {
   console.log(req.body.name);
   console.log(req.body.tel);
 });
+
+app.post('/logout',function(req,res){
+  res.redirect('/login');
+})
+
+app.get('/loadUserName',function(req,res){
+  console.log("AJAX LOAD USERNAME");
+  console.log(req.session.name);
+  res.send(req.session.name);
+})
 
 
 

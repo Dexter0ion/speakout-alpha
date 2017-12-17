@@ -1,6 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var localUsers = require('../public/js/localUsers.js').items;
+var session = require('express-session');
+
+
+//session设置
 
 
 var findUser = function (name, password) {
@@ -20,10 +24,18 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/Formsubmit', function (req, res) {
+  var loginSuccess = findUser(req.body.username, req.body.password);
+  //数据库中有用户信息 存储session 跳转填写界面
   console.log(findUser(req.body.username, req.body.password));
   console.log('loginFromSubmit');
-  //console.log('username:'+req.body.username);
-  //console.log('password'+req.body.password);
-  res.redirect('/typeInfo');
+  if (loginSuccess == true) {
+    req.session.sign = true;
+    req.session.name = req.body.username;
+    res.redirect('/typeInfo');
+  }
+  else{
+    res.redirect('/login');
+  }
 })
 module.exports = router;
+
