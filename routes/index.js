@@ -24,13 +24,10 @@ router.get('/',function(req,res){
   if(req.session.sign){
     console.log(req.session);
     res.send('<strong>'+req.session.name+'</strong>'+'Nice to see you again');
+    
   }
-  else{
-    //未登陆过
-    //req.session.sign=true;
-    //req.session.name = 'Type Zero';
-    res.redirect('/login');
-  }
+  res.render('index', { title: 'Express' });
+
 });
 
 /*

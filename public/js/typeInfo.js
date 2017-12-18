@@ -1,5 +1,5 @@
 //ajax 动态显示登陆用户名
-window.onload= function(){
+window.onload = function () {
   loadUserName();
 }
 
@@ -10,17 +10,17 @@ function loadUserName() {
     // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
     xmlhttp = new XMLHttpRequest();
   }
-  else{
+  else {
     //IE6 IE5
-    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
-  xmlhttp.onreadystatechange=function(){
-    if(xmlhttp.readyState==4&&xmlhttp.status==200){
-      document.getElementById("navUserName").innerText=xmlhttp.responseText;
+  xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      document.getElementById("navUserName").innerText = xmlhttp.responseText;
     }
   }
-  
-  xmlhttp.open("GET","/loadUserName");
+
+  xmlhttp.open("GET", "/loadUserName");
   xmlhttp.send();
 }
 //登出事件监听

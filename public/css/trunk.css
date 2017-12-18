@@ -107,6 +107,15 @@ nav li a:hover {
 	
 }
 
+.header-section-transparent {
+	/*
+	background-color: #ffffff;
+	*/
+	background-color:transparent;
+	
+	
+}
+
 .body-section {
 	/*
 	background-color: #f4f5f6;
@@ -114,6 +123,14 @@ nav li a:hover {
 	background-color: #000;
 
 }
+.body-section-transparent {
+	/*
+	background-color: #f4f5f6;
+	*/
+	background-color:transparent;
+
+}
+
 
 .footer-section {
 	/*
@@ -620,4 +637,9 @@ a.add:hover {
 	box-shadow: none;
 	position: relative;
 	top: 1px;
+}
+
+.placeholder-trans
+{
+	height: 100vh;
 }

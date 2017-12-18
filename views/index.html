@@ -14,7 +14,7 @@
 	<!-- Style Sheets -->
 	<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="css/trunk.css" />
-
+	<link rel="stylesheet" type="text/css" media="all" href="css/animeStyle.css" />
 	<!-- Scripts -->
 	<script type="text/javascript">
 		if (typeof jQuery == 'undefined')
@@ -34,6 +34,7 @@
 	<div class="container">
 
 		<header class="slide">
+
 			<!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
 			<ul id="navToggle" class="burger slide">
 				<!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
@@ -45,12 +46,13 @@
 		</header>
 
 		<nav class="slide">
+
 			<ul>
 				<li>
 					<a href="/" class="active">主页</a>
 				</li>
 				<li>
-					<a href="#" id="loginName">登陆</a>
+					<a href="/login" id="loginName">登陆</a>
 				</li>
 				<li>
 					<a href="#">LINK THREE</a>
@@ -71,40 +73,41 @@
 		</nav>
 
 		<div class="content slide">
+
+
 			<!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
 			<ul class="responsive">
 				<li class="header-section">
-					
-						
+
+
 				</li>
-				<li class="body-section">
-					
-					<div id="page">
-							<h1 class="heart-icon">Heart</h1>
-						<h2>Login</h2>
-						<form method='post' action='/login/Formsubmit'>
+				<li class="body-section-transparent">
+					<canvas id="c"></canvas>
 
-							<label for="username">用户名： </label>
-							<input type="text" name="username" id="username" />
-							<div id="feedback"></div>
-
-							<label for="password">密码: </label>
-							<input type="password" name="password" id="password" />
-
-							<input type="submit" value="前往主页" />
-
+					<div class="placeholder-trans">
+							
+						<form>
+							<input type="submit" value="登陆">
 						</form>
-					</div>
+						</div>
+					
+					<p class="placefiller"></p>
+
 				</li>
-				<li class="footer-section">
-					<p class="placefiller">FOOTER</p>
+				<li class="footer-section-transparent">
+
+
+
+
 				</li>
 			</ul>
 		</div>
 
 	</div>
 
-
+	<script src="/js/anime.min.js"></script>
+	<script src="/js/c.js"></script>
+	<script src="/js/path.js"></script>
 </body>
 
 </html>
