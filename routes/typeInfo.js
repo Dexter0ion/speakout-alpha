@@ -33,8 +33,5 @@ router.post('/FormSubmit', function (req, res) {
   console.log(targetInfo);
 });
 
-router.post('/logout',function(req,res){
-  delete req.session.user;
-  res.redirect('/login');
-});
+
 module.exports = router;

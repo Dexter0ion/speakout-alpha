@@ -15,6 +15,7 @@ var typeInfoBack = require('./routes/typeInfoBack');
 var volunteerForm = require('./routes/volunteerForm');
 var submitPass = require('./routes/submitPass');
 var submitFail = require('./routes/submitFail');
+var ITElite = require('./routes/ITElite.js');
 
 var ejs = require('ejs');
 var app = express();
@@ -42,6 +43,7 @@ app.use('/typeInfoBack', typeInfoBack);
 app.use('/volunteerForm',volunteerForm);
 app.use('/submitPass',submitPass);
 app.use('/submitFail',submitFail);
+app.use('/ITElite',ITElite);
 
 
 
@@ -51,14 +53,25 @@ app.post('/test', function (req, res) {
   console.log(req.body.tel);
 });
 
+
+app.post('/login',function(req,res){
+  //res.redirect('/login');
+  res.render('login',{});
+
+})
+
 app.post('/logout',function(req,res){
-  res.redirect('/login');
+  //req.session.logged_in=false;
+  //res.writeHead(200);
+  req.session.sign=false;
+  res.redirect('/');
 })
 
 app.get('/loadUserName',function(req,res){
   console.log("AJAX LOAD USERNAME");
   console.log(req.session.name);
   res.send(req.session.name);
+
 })
 
 

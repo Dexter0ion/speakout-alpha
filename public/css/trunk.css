@@ -643,3 +643,22 @@ a.add:hover {
 {
 	height: 100vh;
 }
+
+.placeholder-trans-small
+{
+	height: 30vh;
+}
+
+input[type='submit'].middleLargeInput{
+	background-color: #cb6868;
+	color: #f3dad1;
+	border: none;
+	width: 96%;
+	border-radius: 5px;
+	padding: 8px 10px;
+	margin-top: 10px;
+	float: right;
+	font-size: 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+}

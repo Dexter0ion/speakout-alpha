@@ -22,8 +22,9 @@ router.use(session({
 router.get('/',function(req,res){
   //session 已经登陆
   if(req.session.sign){
-    console.log(req.session);
-    res.send('<strong>'+req.session.name+'</strong>'+'Nice to see you again');
+    //console.log(req.session);
+    //res.send('<strong>'+req.session.name+'</strong>'+'Nice to see you again');
+    res.render('typeInfo', { title: 'typeInfo' });
     
   }
   res.render('index', { title: 'Express' });
